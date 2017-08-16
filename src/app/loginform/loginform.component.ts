@@ -21,6 +21,7 @@ export class LoginformComponent implements OnInit {
   loginUser() {
     if (this.username === this.user.getUserName() && this.password === this.user.getUserPass()) {
       this.loader = true;
+      this.pass_error = false;
       setTimeout(() => {
         this.user.setUser(this.username , this.password);
         this.user.setUserLogged();
