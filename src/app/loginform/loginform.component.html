@@ -1,0 +1,17 @@
+<form (submit)="loginUser()">
+	<p class="error" *ngIf=pass_error> Usuario o pasword incorrecto</p>
+	<div class="input">
+		<label>Username</label>
+		<input type="text" [(ngModel)]="username" name="user"  >
+	</div>
+	<div class="input">
+		<label>Password</label>
+		<input type="password" [(ngModel)]="password" name="pass">
+	</div>
+	<div class="input">
+		<input class="btn btn-info" type="submit" value="Login">
+	</div>
+</form>
+<div *ngIf=loader class="back_loader">
+  <div class="loader"></div>
+</div>
